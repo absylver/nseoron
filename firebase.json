@@ -1,10 +1,30 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": ["firebase.json", "**/.*"],
+    "ignore": [
+      "firebase.json",
+      "**/.*"
+    ],
     "headers": [
-      { "source": "**/*.@(jpg|png|css|js)", "headers": [{ "key": "Cache-Control", "value": "max-age=3600" }] },
-      { "source": "stream.js", "headers": [{ "key": "Cache-Control", "value": "max-age=300" }] }
-    ]
+      {
+        "source": "**/*.@(jpg|png|css|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=3600"
+          }
+        ]
+      },
+      {
+        "source": "stream.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=300"
+          }
+        ]
+      }
+    ],
+    "site": "nseoron"
   }
 }
