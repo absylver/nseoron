@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- =============================================================
+     LIVESTREAM SETTINGS
+     STREAM_SHEET_ID: the Google Sheet that controls the video.
+       Change cell A2 of that sheet (YouTube or Facebook link) and
+       the site switches within ~30 seconds. No redeploy needed.
+       For a new client: copy the sheet, share it "Anyone with the
+       link: Viewer", and paste its ID here (the long code between
+       /d/ and /edit in the sheet's address).
+     STREAM_URL: backup link, shown first and used if the sheet
+       can't be reached.
+     ============================================================= -->
+<script>
+  window.STREAM_SHEET_ID = "10FU8k0H5pg5uIbqdLK1porUBLIh1gL5dKe6BIjXLalw";
+  window.STREAM_URL = "https://youtu.be/hnfqBLg6z-E";
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NSE Oron Branch – Inauguration of the 3rd Chairman & Exco</title>
+<meta name="description" content="Nigerian Society of Engineers, Oron Branch – Inauguration of the 3rd Chairman and Exco Members. Oron Local Government Multi-Purpose Hall, Saturday 21st November 2026, 10:00 AM. Watch live.">
+<meta name="theme-color" content="#0A5C2B">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="logo.png" alt="NSE Oron Branch">
+    </a>
+    <nav>
+      <a href="#watch" class="btn-watch">Watch Live</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 1. Promo ticker: always directly under the navbar -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Livestream brought to you by Legates Innovation — call 0706561615182 or email legatus04@gmail.com to book us for your event.</span>
+    <span>Livestream brought to you by Legates Innovation — call 0706561615182 or email legatus04@gmail.com to book us for your event.</span>
+  </div>
+</div>
+
+<div class="visitor-banner">
+  <div class="wrap">
+    <img src="https://countapi.mileshilliard.com/api/v1/hit/nse_oron_inauguration_2026/shield?text=Live%20viewers&bgcolor=d7262b&textcolor=ffffff&style=plastic" alt="Live viewers" />
+  </div>
+</div>
+
+<!-- 2. Event title -->
+<section class="hero">
+  <div class="wrap">
+    <h1 class="reveal-left">Inauguration of the <span class="ordinal">3<sup>rd</sup></span> Chairman &amp; Exco Members</h1>
+  </div>
+</section>
+
+<!-- 3. Speakers / guests slider (drops below the livestream on event day) -->
+<section class="speakers-section">
+  <div class="wrap">
+    <div class="carousel reveal-right reveal-d1">
+        <div class="carousel-track" id="carousel-track">
+
+          <div class="speaker-card">
+            <img class="photo" src="images/eyo-abia.jpg" alt="Engr. Eyo Abia">
+            <div class="role-tag">Chairman, Oron Branch</div>
+            <div class="name">Engr. Eyo Abia</div>
+            <div class="role">MNSE, MNEMSA, MCIPEN</div>
+          </div>
+
+          <div class="speaker-card">
+            <img class="photo" src="images/alimusuya-rabiu.jpg" alt="Engr. Alimusuya Rabiu">
+            <div class="role-tag">Chairman of the Occasion</div>
+            <div class="name">Engr. Alimusuya Rabiu</div>
+            <div class="role">FNSE, FASCE, FAENG, MFR – President/Chairman in Council, Nigerian Society of Engineers</div>
+          </div>
+
+          <div class="speaker-card">
+            <img class="photo" src="images/victor-antai.jpg" alt="Rt. Hon. Sir Victor Antai, PhD">
+            <div class="role-tag">Special Guest of Honour</div>
+            <div class="name">Rt. Hon. Sir Victor Antai, PhD</div>
+            <div class="role">Executive Director Projects, NDDC</div>
+          </div>
+
+          <div class="speaker-card">
+            <img class="photo" src="images/promise-elechi.jpg" alt="Engr. Promise Elechi, PhD">
+            <div class="role-tag">Keynote Speaker</div>
+            <div class="name">Engr. Promise Elechi, Ph.D</div>
+            <div class="role">FNIEEE, MNSE, SMIEEE, MIAEng, MIET</div>
+            <div class="card-topic">
+              <span class="card-topic-label">Keynote topic</span>
+              <p>Developing an Engineering Scorecard for Sustainable Infrastructure Planning and Management in Akwa Ibom State</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="carousel-controls">
+          <div class="carousel-dots" id="carousel-dots"></div>
+          <div class="carousel-arrows">
+            <button type="button" id="carousel-prev" aria-label="Previous speaker">&#8249;</button>
+            <button type="button" id="carousel-next" aria-label="Next speaker">&#8250;</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Livestream (moves above the speakers on event day) -->
+<section class="stream-section" id="watch">
+  <div class="wrap">
+    <h2 class="reveal-left">Watch live</h2>
+    <p class="sub reveal-left reveal-d1">Join the live transmission of the inauguration of the 3rd Chairman and Exco Members, NSE Oron Branch</p>
+
+    <div class="stream-frame reveal-up reveal-d2">
+      <!-- The video link is set at the top of this file (STREAM_URL) -->
+      <iframe
+        id="stream-player"
+        src="about:blank"
+        title="NSE Oron Branch Inauguration Livestream"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="stream-actions reveal-up reveal-d3">
+      <!-- Zoom meeting link -->
+      <a class="btn-zoom" href="https://us05web.zoom.us/j/84465579385?pwd=aXGq9B917Cx6attb9AZy5Pzb9OzlVv.1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5h8A2.5 2.5 0 0 1 16 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-8A2.5 2.5 0 0 1 3 16.5v-9zm14 2.2 3.4-2.4c.7-.5 1.6 0 1.6.8v7.8c0 .8-.9 1.3-1.6.8L17 14.3V9.7z"/></svg>
+        Watch on Zoom
+      </a>
+      <div class="social-row">
+      <a href="https://www.facebook.com/PLACEHOLDER" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/PLACEHOLDER" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45.53c.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.28 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-8.4a1.17 1.17 0 1 1-2.34 0 1.17 1.17 0 0 1 2.34 0z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/PLACEHOLDER" target="_blank" rel="noopener" aria-label="Subscribe on YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8.2s-.2-1.5-.8-2.1c-.8-.8-1.6-.8-2-.9C16.1 5 12 5 12 5h0s-4.1 0-7 .2c-.4 0-1.2.1-2 .9-.6.6-.8 2.1-.8 2.1S2 10 2 11.7v1.6c0 1.7.2 3.5.2 3.5s.2 1.5.8 2.1c.8.8 1.8.8 2.3.9 1.6.2 6.7.2 6.7.2s4.1 0 7-.2c.4 0 1.2-.1 2-.9.6-.6.8-2.1.8-2.1s.2-1.7.2-3.5v-1.6C22 10 21.8 8.2 21.8 8.2zM9.9 14.6V8.9l5.4 2.9-5.4 2.8z"/></svg>
+      </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Event description -->
+<section class="details" id="details">
+  <div class="cta-band">
+    <div class="wrap cta-inner">
+      <div class="cta-info">
+        <div class="info-card reveal-left">
+          <span class="cta-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+          <span class="cta-text">
+            <span class="info-label">Date &amp; time</span>
+            <span class="info-value">Saturday, 21st November 2026</span>
+            <span class="info-sub">10:00 AM</span>
+          </span>
+        </div>
+        <div class="info-card reveal-left reveal-d1">
+          <span class="cta-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+          <span class="cta-text">
+            <span class="info-label">Venue</span>
+            <span class="info-value">Oron Local Government Multi-Purpose Hall</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="cta-actions">
+        <p class="cta-label reveal-right">For enquiries, call</p>
+        <a class="cta-call cta-call-primary reveal-right reveal-d1" href="tel:+2348039302669">
+          <span class="cta-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg></span>
+          <span class="cta-text">
+            <span class="cta-who">Engr. Victor Odokwo, MNSE</span>
+            <span class="cta-role">Chairman, Planning Committee</span>
+            <span class="cta-num">+234 803 930 2669</span>
+          </span>
+        </a>
+        <a class="cta-call cta-call-secondary reveal-right reveal-d2" href="tel:+2348034306329">
+          <span class="cta-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg></span>
+          <span class="cta-text">
+            <span class="cta-who">The Branch Chairman</span>
+            <span class="cta-role">NSE Oron Branch</span>
+            <span class="cta-num">+234 803 430 6329</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="org">copyright &copy; Legates Innovation &middot; NSE Oron Branch Inauguration 2026</div>
+  </div>
+</footer>
+
+<script src="stream.js"></script>
+<script src="carousel.js"></script>
+<script src="event-mode.js"></script>
+<script src="reveal.js"></script>
+</body>
+</html>
