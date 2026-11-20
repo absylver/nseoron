@@ -1182,3 +1182,81 @@ footer{ padding-top: 22px; }
 .match-inner{ display: block; }
 .match-flyer{ max-width: 460px; margin-top: 20px; }
 @media (max-width: 760px){ .match-flyer{ max-width: none; } }
+
+/* =====================================================================
+   Partners & sponsors logo strip (under the livestream)
+   ===================================================================== */
+.partners-section{ padding: 4px 0 28px; }
+.partners-label{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.partners-label::before{
+  content: "";
+  width: 22px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--gold);
+}
+.partners-strip{
+  overflow: hidden;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper-deep);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.partners-track{
+  display: flex;
+  width: max-content;
+  animation: partners-scroll 60s linear infinite;
+}
+.partners-strip:hover .partners-track{ animation-play-state: paused; }
+.partners-set{
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.partner{
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  margin-right: 14px;
+  padding: 6px 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.partner img{
+  display: block;
+  height: 50px;
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+}
+@keyframes partners-scroll{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+@media (max-width: 640px){
+  .partner{ height: 54px; padding: 5px 8px; margin-right: 10px; }
+  .partner img{ height: 42px; max-width: 150px; }
+  .partners-track{ animation-duration: 50s; }
+}
+@media (prefers-reduced-motion: reduce){
+  .partners-strip{ overflow-x: auto; }
+  .partners-track{ animation: none; }
+  .partners-set[aria-hidden="true"]{ display: none; }
+}

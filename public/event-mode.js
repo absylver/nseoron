@@ -14,6 +14,9 @@
   // Livestream goes up, speakers slider drops directly below it.
   // Navbar, ticker, title and everything else stay where they are.
   speakers.parentNode.insertBefore(stream, speakers);
+  // Partners strip stays directly under the livestream.
+  const partners = document.querySelector(".partners-section");
+  if (partners) speakers.parentNode.insertBefore(partners, speakers);
 
   // Pulsing "live" dot on the Watch Live button, and a note swap.
   document.body.classList.add("is-live");
