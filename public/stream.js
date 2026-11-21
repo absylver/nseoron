@@ -50,6 +50,25 @@
     if (!src || src === current) return;
     current = src;
     frame.src = src;
+    updateSourceButton(raw);
+  }
+
+  // "Watch on YouTube / Facebook" button: opens the same live video directly,
+  // for viewers whose player shows "playback disabled by the video owner".
+  const sourceBtn = document.getElementById("watch-source");
+  function updateSourceButton(raw) {
+    if (!sourceBtn) return;
+    try {
+      const u = new URL(String(raw).trim());
+      const id = youtubeId(u);
+      let href = null, label = "";
+      if (id) { href = "https://www.youtube.com/watch?v=" + encodeURIComponent(id); label = "Watch on YouTube"; }
+      else if (isFacebook(u)) { href = u.href; label = "Watch on Facebook"; }
+      if (!href) return;
+      sourceBtn.href = href;
+      sourceBtn.querySelector("span").textContent = label;
+      sourceBtn.hidden = false;
+    } catch (e) {}
   }
 
   show(window.STREAM_URL || "");

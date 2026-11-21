@@ -1260,3 +1260,9 @@ footer{ padding-top: 22px; }
   .partners-track{ animation: none; }
   .partners-set[aria-hidden="true"]{ display: none; }
 }
+
+/* Stream buttons: Zoom + "Watch on YouTube/Facebook" side by side */
+.stream-buttons{ display: flex; flex-wrap: wrap; gap: 12px; }
+.btn-source{ background: var(--red); }
+.btn-source:hover{ background: #B81E23; }
+.btn-source[hidden]{ display: none; }
